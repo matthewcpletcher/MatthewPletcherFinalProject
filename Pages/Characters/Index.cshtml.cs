@@ -21,8 +21,8 @@ namespace MatthewPletcherFinalProject.Characters
         public IList<Character> Character { get;set; }
 
         [BindProperty(SupportsGet=true)]
-        public int PageNum {get; set;}
-        public int PageSize {get; set;}
+        public int PageNum {get; set;} = 1;
+        public int PageSize {get; set;} =10;
 
         public async Task OnGetAsync()
         {

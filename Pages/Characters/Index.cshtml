@@ -73,10 +73,10 @@
 <nav aria-label="Page navigation example">
   <ul class="pagination">
     <li class="page-item @prevDisabled">
-        <a class="page-link" asp-page="Characters/Index" asp-route-PageNum="@(Model.PageNum - 1)">Previous</a>
+        <a class="page-link" asp-page="./Characters/Index" asp-route-PageNum="@(Model.PageNum - 1)">Previous</a>
     </li>
     <li class="page-item @forwardDisable">
-        <a class="page-link" asp-page="Characters/Index" asp-route-PageNum="@(Model.PageNum + 1)">Next</a>
+        <a class="page-link" asp-page="./Characters/Index" asp-route-PageNum="@(Model.PageNum + 1)">Next</a>
     </li>
   </ul>
 </nav>
