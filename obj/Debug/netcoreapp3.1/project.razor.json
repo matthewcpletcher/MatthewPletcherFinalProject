@@ -14467,11 +14467,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\WappW\\CIDM 3312\\MatthewPletcherFinalProject\\Pages\\AllCharacters.cshtml",
-      "TargetPath": "Pages\\AllCharacters.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\WappW\\CIDM 3312\\MatthewPletcherFinalProject\\Pages\\_ViewStart.cshtml",
       "TargetPath": "Pages\\_ViewStart.cshtml",
       "FileKind": "mvc"
