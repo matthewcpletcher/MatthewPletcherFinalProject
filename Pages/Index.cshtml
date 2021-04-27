@@ -1,20 +1,10 @@
 ﻿@page
-@model IndexModel
+@model Index1Model
 @{
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1>Welcome</h1>
 
-<p>List of Shows</p>
-@foreach(var b in Model.Shows)
-{
-    <p>@Html.DisplayFor(modelItem => b.Title)</p>
-}
-@foreach (var a in Model.Characters)
-{
-    <p>@Html.DisplayFor(modelItem => a.Name)</p>
-}
+<a class="nav-link text-dark" asp-area="" asp-page="/Shows/Index">Shows</a>
+<a class="nav-link text-dark" asp-area="" asp-page="/AllCharacters">All Characters</a>

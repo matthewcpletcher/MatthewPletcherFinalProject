@@ -10,14 +10,14 @@ using FinalProject.Models;
 
 namespace MatthewPletcherFinalProject.Pages
 {
-    public class IndexModel : PageModel
+    public class Index1Model : PageModel
     {
         private readonly ShowDbContext _context;
-        private readonly ILogger<IndexModel> _logger;
+        private readonly ILogger<Index1Model> _logger;
         public List<Show> Shows {get; set;}
         public List<Character> Characters {get; set;}
 
-        public IndexModel(ShowDbContext context, ILogger<IndexModel> logger)
+        public Index1Model(ShowDbContext context, ILogger<Index1Model> logger)
         {
             _context = context;
             _logger = logger;

@@ -106,13 +106,6 @@ namespace FinalProject.Models
                     },
                     new Character
                     {
-                        Name = "Mikasa Ackerman",
-                        Age = 19,
-                        Gender = "Female",
-                        ShowID = 1,
-                    },  
-                    new Character
-                    {
                         Name = "Naruto Uzumaki",
                         Age = 12,
                         Gender = "Male",

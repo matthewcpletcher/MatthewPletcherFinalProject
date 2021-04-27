@@ -14402,8 +14402,33 @@
   "RootNamespace": "MatthewPletcherFinalProject",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\WappW\\CIDM 3312\\MatthewPletcherFinalProject\\Pages\\Shows\\Index.cshtml",
+      "TargetPath": "Pages\\Shows\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\WappW\\CIDM 3312\\MatthewPletcherFinalProject\\Pages\\Shows\\Delete.cshtml",
+      "TargetPath": "Pages\\Shows\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\WappW\\CIDM 3312\\MatthewPletcherFinalProject\\Pages\\Error.cshtml",
       "TargetPath": "Pages\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\WappW\\CIDM 3312\\MatthewPletcherFinalProject\\Pages\\Characters\\Delete.cshtml",
+      "TargetPath": "Pages\\Characters\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\WappW\\CIDM 3312\\MatthewPletcherFinalProject\\Pages\\Shows\\Edit.cshtml",
+      "TargetPath": "Pages\\Shows\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\WappW\\CIDM 3312\\MatthewPletcherFinalProject\\Pages\\Characters\\Index.cshtml",
+      "TargetPath": "Pages\\Characters\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14417,6 +14442,21 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\WappW\\CIDM 3312\\MatthewPletcherFinalProject\\Pages\\Characters\\Edit.cshtml",
+      "TargetPath": "Pages\\Characters\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\WappW\\CIDM 3312\\MatthewPletcherFinalProject\\Pages\\Shows\\Create.cshtml",
+      "TargetPath": "Pages\\Shows\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\WappW\\CIDM 3312\\MatthewPletcherFinalProject\\Pages\\Characters\\Details.cshtml",
+      "TargetPath": "Pages\\Characters\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\WappW\\CIDM 3312\\MatthewPletcherFinalProject\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -14427,13 +14467,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\WappW\\CIDM 3312\\MatthewPletcherFinalProject\\Pages\\AllCharacters.cshtml",
+      "TargetPath": "Pages\\AllCharacters.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\WappW\\CIDM 3312\\MatthewPletcherFinalProject\\Pages\\_ViewStart.cshtml",
       "TargetPath": "Pages\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\WappW\\CIDM 3312\\MatthewPletcherFinalProject\\Pages\\Characters\\Create.cshtml",
+      "TargetPath": "Pages\\Characters\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\WappW\\CIDM 3312\\MatthewPletcherFinalProject\\Pages\\Shared\\_Layout.cshtml",
       "TargetPath": "Pages\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\WappW\\CIDM 3312\\MatthewPletcherFinalProject\\Pages\\Shows\\Details.cshtml",
+      "TargetPath": "Pages\\Shows\\Details.cshtml",
       "FileKind": "mvc"
     }
   ],
