@@ -24,25 +24,25 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.Character)
+        @foreach (var b in Model.Character)
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Name)
+                    @Html.DisplayFor(modelItem => b.Name)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Age)
+                    @Html.DisplayFor(modelItem => b.Age)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Gender)
+                    @Html.DisplayFor(modelItem => b.Gender)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Show.Title)
+                    @Html.DisplayFor(modelItem => b.Show.Title)
                 </td>
                 <td>
-                <a asp-page="./Edit" asp-route-id="@item.CharacterID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.CharacterID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.CharacterID">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@b.CharacterID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@b.CharacterID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@b.CharacterID">Delete</a>
                 </td>
             </tr>
         }
@@ -50,12 +50,6 @@
 </table>
 
 <hr>
-<!--Finding the amount of Characters and then dividing by pageSize to get total amout of pages needed -->
-@{
-    float x = Model.Character.Count();
-    float y = x/10;
-    var round = Math.Round(y, 0, MidpointRounding.AwayFromZero);
-}
 @{
     var prevDisabled="";
     if (Model.PageNum <= 1)
@@ -65,20 +59,20 @@
 }
 @{
     var forwardDisable="";
-    if (Model.PageNum == round)
+    if (Model.Character.Count < 10)
     {
         forwardDisable ="disabled";
     }
 }
-<nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item @prevDisabled">
-        <a class="page-link" asp-page="./Characters/Index" asp-route-PageNum="@(Model.PageNum - 1)">Previous</a>
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item @prevDisabled">
+        <a class="page-link" asp-page="./Index" asp-route-PageNum="@(Model.PageNum - 1)">Previous</a>
     </li>
-    <li class="page-item @forwardDisable">
-        <a class="page-link" asp-page="./Characters/Index" asp-route-PageNum="@(Model.PageNum + 1)">Next</a>
+    <li class="page-item @forwardDisable">
+        <a class="page-link" asp-page="./Index" asp-route-PageNum="@(Model.PageNum + 1)">Next</a>
     </li>
-  </ul>
+  </ul>
 </nav>
 
 

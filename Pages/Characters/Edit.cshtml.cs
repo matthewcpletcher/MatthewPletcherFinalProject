@@ -36,7 +36,7 @@ namespace MatthewPletcherFinalProject.Characters
             {
                 return NotFound();
             }
-           ViewData["ShowID"] = new SelectList(_context.Shows, "ShowID", "Genre");
+           ViewData["ShowID"] = new SelectList(_context.Shows, "ShowID", "Title");
             return Page();
         }
 

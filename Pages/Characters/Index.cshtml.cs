@@ -19,6 +19,7 @@ namespace MatthewPletcherFinalProject.Characters
         }
 
         public IList<Character> Character { get;set; }
+        public List<Show> Shows {get; set;}
 
         [BindProperty(SupportsGet=true)]
         public int PageNum {get; set;} = 1;
@@ -26,6 +27,7 @@ namespace MatthewPletcherFinalProject.Characters
 
         public async Task OnGetAsync()
         {
+            Shows = _context.Shows.ToList();
             Character = await _context.Characters.Skip((PageNum-1)*PageSize).Take(PageSize).ToListAsync();
         }
     }
