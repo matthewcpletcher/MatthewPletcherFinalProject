@@ -17,8 +17,6 @@ namespace MatthewPletcherFinalProject.Characters
         {
             _context = context;
         }
-        public string SearchTerm {get; set;}
-
         public IList<Character> Character { get;set; }
         public List<Show> Shows {get; set;}
 
@@ -29,6 +27,7 @@ namespace MatthewPletcherFinalProject.Characters
 
         [BindProperty(SupportsGet=true)]
         public string CurrentSort {get; set;}
+        public string searchString {get; set;}
         public async Task OnGetAsync()
         {
             Shows = _context.Shows.ToList();
@@ -43,8 +42,16 @@ namespace MatthewPletcherFinalProject.Characters
                     query = query.OrderByDescending(p => p.Name);
                     break;
             }
+
             CurrentPage = PageNum;
             Character = await query.Skip((PageNum-1)*PageSize).Take(PageSize).ToListAsync();
+
+            IQueryable<Character> searchChar = from s in _context.Characters select s;  
+            if(!String.IsNullOrEmpty(searchString)){
+            searchChar = searchChar.Where(s => s.Name.Contains(searchString));
+            }
+
+
         }
     }
 }
