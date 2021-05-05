@@ -23,5 +23,6 @@ namespace FinalProject.Models
         [Required]
         public Show Show {get; set;}
         public int ShowID {get; set;}
+        
     }
 }

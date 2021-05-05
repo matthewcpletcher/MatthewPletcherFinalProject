@@ -17,6 +17,7 @@ namespace MatthewPletcherFinalProject.Characters
         {
             _context = context;
         }
+        public string SearchTerm {get; set;}
 
         public IList<Character> Character { get;set; }
         public List<Show> Shows {get; set;}
@@ -24,11 +25,26 @@ namespace MatthewPletcherFinalProject.Characters
         [BindProperty(SupportsGet=true)]
         public int PageNum {get; set;} = 1;
         public int PageSize {get; set;} =10;
+        public int CurrentPage {get; set;}
 
+        [BindProperty(SupportsGet=true)]
+        public string CurrentSort {get; set;}
         public async Task OnGetAsync()
         {
             Shows = _context.Shows.ToList();
-            Character = await _context.Characters.Skip((PageNum-1)*PageSize).Take(PageSize).ToListAsync();
+            var query = _context.Characters.Select(p => p);
+
+            switch (CurrentSort)
+            {
+                case "name_asc":
+                    query = query.OrderBy(p => p.Name);
+                    break;
+                case "name_desc":
+                    query = query.OrderByDescending(p => p.Name);
+                    break;
+            }
+            CurrentPage = PageNum;
+            Character = await query.Skip((PageNum-1)*PageSize).Take(PageSize).ToListAsync();
         }
     }
 }

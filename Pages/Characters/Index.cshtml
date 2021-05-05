@@ -10,7 +10,14 @@
     <thead>
         <tr>
             <th>
-                Name
+                @{
+                    var firstSort = "name_asc";
+                    if (Model.CurrentSort == "name_asc")
+                    {
+                        firstSort = "name_desc";
+                    }
+                }
+                <a asp-page="./Index" asp-route-PageNum="@Model.PageNum" asp-route-CurrentSort="@firstSort">Name</a>
             </th>
             <th>
                 Age
@@ -40,7 +47,6 @@
                     @Html.DisplayFor(modelItem => b.Show.Title)
                 </td>
                 <td>
-                <a asp-page="./Edit" asp-route-id="@b.CharacterID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@b.CharacterID">Details</a> |
                 <a asp-page="./Delete" asp-route-id="@b.CharacterID">Delete</a>
                 </td>
@@ -67,10 +73,10 @@
 <nav aria-label="Page navigation example">
   <ul class="pagination">
     <li class="page-item @prevDisabled">
-        <a class="page-link" asp-page="./Index" asp-route-PageNum="@(Model.PageNum - 1)">Previous</a>
+        <a class="page-link" asp-page="./Index" asp-route-CurrentSort="@(Model.CurrentSort)" asp-route-PageNum="@(Model.PageNum - 1)">Previous</a>
     </li>
     <li class="page-item @forwardDisable">
-        <a class="page-link" asp-page="./Index" asp-route-PageNum="@(Model.PageNum + 1)">Next</a>
+        <a class="page-link" asp-page="./Index" asp-route-CurrentSort="@(Model.CurrentSort)" asp-route-PageNum="@(Model.PageNum + 1)">Next</a>
     </li>
   </ul>
 </nav>
