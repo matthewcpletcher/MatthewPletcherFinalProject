@@ -17,8 +17,10 @@ namespace MatthewPletcherFinalProject.Characters
         {
             _context = context;
         }
+        //List of Characters
         public IList<Character> Character { get;set; }
         public List<Show> Shows {get; set;}
+        //Properties for the Page Number and Size
 
         [BindProperty(SupportsGet=true)]
         public int PageNum {get; set;} = 1;
@@ -33,6 +35,7 @@ namespace MatthewPletcherFinalProject.Characters
             Shows = _context.Shows.ToList();
             var query = _context.Characters.Select(p => p);
 
+            //sorting
             switch (CurrentSort)
             {
                 case "name_asc":
@@ -43,9 +46,11 @@ namespace MatthewPletcherFinalProject.Characters
                     break;
             }
 
+            //paging
             CurrentPage = PageNum;
             Character = await query.Skip((PageNum-1)*PageSize).Take(PageSize).ToListAsync();
 
+            //Non working search functions
             IQueryable<Character> searchChar = from s in _context.Characters select s;  
             if(!String.IsNullOrEmpty(searchString)){
             searchChar = searchChar.Where(s => s.Name.Contains(searchString));
